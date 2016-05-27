@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8" />
+        <title>Welcome to Riot</title>
+		<link rel="icon" type="image/png" href="../geo.png">
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<link type="text/css" href="tryit.css" rel="stylesheet">
+		<link rel="icon" type="image/png" href="geo.png">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-28810488-3', 'auto');
+  ga('send', 'pageview');
+
+    var appInsights=window.appInsights||function(config){
+        function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
+    }({
+        instrumentationKey:"b8753c09-a8c8-4af6-ad20-b576606eb2ab"
+    });
+    
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
+    </head>
+    <body>
+		<a href="/auth"><div id="loginButton" style="float: right; width: 90px; height: 45px; background: #1355f3; box-shadow: 5px 5px 5px #808080; /*border: 2px solid #808080;*/ position: fixed; top: 15px; right: 15px; z-index: 100;"><p style="font-size: x-large; margin-top: 10px; color: #fff; text-align: center; border-radius: 4px;">Login</p></div></a>
+        <div id="scroll" style="display: none;">
+
+		<ul class="navbar">
+		<li class="nav" id="titlehead"style="border: none;">	
+			<a>Riot</a>
+			<!--<img src="geo.png" width="10%" height="10%" alt="geo_logo">-->
+		</li>
+		<li class="nav">
+			<a href="#uno"><span>Setup</span></a>
+		</li>
+		<li class="nav">
+			<a href="#dos"><span>Sign Up</span></a>
+		</li>
+		<li class="nav">
+			<a href="#tres"><span>Grab The Code</span></a>
+		</li>
+		<li class="nav">
+			<a href="#quatro"><span>Define Rules</span></a>
+		</li>
+		<li class="nav">
+			<a href="#cinco"><span>More</span></a>	
+		</li>
+		<li><p id="width"></p></li>
+	</ul>
+	
+
+</div>
+<div id="bonero">
+<span id="w1">ARDUINO </span><span id="w2">IS</span></br><span id="w3">ABOUT TO GET </span><span id="w4">A </span></br>
+<span id="w5">WHOLE LOT MORE </span></br><span id="w6">INTERESTING.</span>
+</div>
+<div id="bozero"> </div>
+		<div id="cero">
+		<span class="num">Using Arduino</span><br><br><br><br>
+		<h1 style="margin-left: 50px;">Set up an Arduino to send and receive data over the internet using Riot.</h1>
+		</div>
+		
+		<div id="uno">
+			<table>
+			<tr>
+			<td>
+			<span class="num">1.</span>
+			<h2>You'll need an Arduino board and an ethernet shield. We're currently working on documentation for WiFi shields. Meanwhile, the API for working with Riot is the same for both, so no harm in trying.</h2>
+			</td>
+			<td>
+			<img src="arduinos.png" alt="hardware" id="img1">
+			</td>
+			</tr>
+			</table>
+		
+		</div>
+
+		<div id="dos">
+			<table>
+			<tr>
+			<td>
+			<span class="num">2.</span>
+			<h2>Before you continue, you'll need an account to access the API and obtain your device connection strings. You'll also need an account to set rules (described below), view the data sent by your device and to control that device.</h2>
+			</td>
+			<td>
+			<h2 style="left: 500px; top: 50px; width: 100%; font-size: 30px;">Request an invite. We'll email you when your account is ready.</h2>
+			<form name="reg" id="reg">
+			<input type="email" name="email" class="box" placeholder="email">
+			<input type="button" class="plane"value="Request Invite" onclick="addEmail();" required>
+			</form>
+			<h2 id="true" style="left: 500px; top: 200px; width: 100%; font-size: 25px; color: #00ff21;"></h2>
+			</td>
+			</tr>
+			</table>
+		
+		</div>
+		<div id="tres">
+			<table>
+			<tr>
+			<td>
+			<span class="num">3.</span>
+			<h2>Add the pre-generated code in your account to an Arduino sketch. We'll tell you exactly how to integrate the input and output devices on your Arduino into the Riot API.</h2>
+			</td>
+			<td>
+			<img src="code.png" alt="hardware" id="img1" style="left: 600px;">
+			</td>
+			</tr>
+			</table>
+		</div>
+			<div id="quatro">
+			<table>
+			<tr>
+			<td>
+			<span class="num">4.</span>
+			<h2>Once your device starts sending data to Riot, use a simple tool in your account to determine how to deal with it. There is no specific way to format the data being sent into Riot; you define the rules for dealing with </h2>
+			</td>
+			<td>
+			<img src="set_rules.png" alt="hardware" id="img1" style="left: 400px;">
+			</td>
+			</tr>
+			</table>
+		</div>
+
+<!--Add Email Script-->
+<script type="text/javascript">
+	function addEmail() {
+		var request = new XMLHttpRequest();
+		var address = document.forms['reg']['email'].value;
+		document.getElementById('reg').style.backgroundColor = "#808080";
+		request.open('GET', '../auth/register/?address=' + address, false);
+		//xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		request.send();
+		document.getElementById('reg').style.display = "none";
+		document.getElementById('true').innerHTML = "Thanks! You will receive an invitation at " + address + " shortly.";
+	}
+</script>
+<script type="text/javascript">
+	var d = new Date();
+	var n = new Array(1, 2, 3, 4, 5);
+	var t = d.getSeconds();
+	setTimeout(function(){document.getElementById("w1").style.display = "inline"}, 1000);
+	setTimeout(function(){document.getElementById("w2").style.display = "inline"}, 1500);
+	setTimeout(function(){document.getElementById("w3").style.display = "inline"}, 1650);
+	setTimeout(function(){document.getElementById("w4").style.display = "inline"}, 2500);
+	setTimeout(function(){document.getElementById("w5").style.display = "inline"}, 2500);
+	setTimeout(function(){document.getElementById("w6").style.display = "inline"}, 3100);
+</script>
+<script type="text/javascript">
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top - 100
+	        }, 1500);
+	        return false;
+	      }
+	    }
+	  });
+	});
+	</script>
+    </body>
+</html>

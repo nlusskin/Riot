@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Welcome to Riot</title>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<link type="text/css" href="indie.css" rel="stylesheet">
+		<link rel="icon" type="image/png" href="geo.png">
+<script type="text/javascript">
+    var appInsights=window.appInsights||function(config){
+        function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
+    }({
+        instrumentationKey:"b8753c09-a8c8-4af6-ad20-b576606eb2ab"
+    });
+    
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
+    </head>
+    <body>
+
+
+<div id="scroll">
+
+
+		<ul class="navbar">
+		<li class="nav" id="titlehead"style="border: none;">	
+			<a>Riot</a>
+			<!--<img src="geo.png" width="10%" height="10%" alt="geo_logo">-->
+		</li>
+		<li class="nav">
+			<a href="#uno"><span>Data</span></a>
+		</li>
+		<li class="nav">
+			<a href="#dos"><span>Collection</span></a>
+		</li>
+		<li class="nav">
+			<a href="#tres"><span>Insights</span></a>
+		</li>
+		<li class="nav">
+			<a href="#quatro"><span>Login</span></a>
+		</li>
+		<li class="nav">
+			<a href="#cinco"><span>Learn More</span></a>	
+		</li>
+		<li class="nav">
+			<a href="/try"><span style="color: #4cff00">Try It</span></a>
+		</li>
+	</ul>
+	
+
+</div>
+		
+        <div id="uno">
+			<a id="1"></a>
+			<table><tr><td><canvas id='intro' width="800" height="550"><p>Nothing here.</p></canvas></td>
+			<td class="uno"><h1  class="intro" style="color: #4cff00;">Start with data.</h1><h1  class="intro" style="color: #4cff00;">End with insights.</h1></td></tr>
+			</table>
+		</div>
+		
+		<div id="dos">
+			<a id="2"></a>
+			<table><tr><td><h1 style="color: #fff;">No more messy data.</h1><br><h2 id="desc">Riot collects data from everywhere and sorts it into neat bins, just for you. This way, it's easy to figure out just what's going on with all of your devices.</h2></td>
+			<td class="messy"><canvas id="messy" height="400" width="550"><p>Nothing here.</p></canvas></td>
+			</tr></table>
+		</div>
+
+		<div id="tres">
+			<a id="3"></a>
+			<table><tr><td><canvas id="clean" height="600" width="550"><p>Nothing here.</p></canvas></td>
+			<td class="messy1"><h1 style="color: #fff;">Readable insights.</h1><br><h2 id="desc">Riot takes data from anything, anywhere and turns those bits into things that you can see.</h2><br><p>Using a special algorithm, Riot takes whatever data you send it - from a thermostat, car, electrical grid, wind turbine, you get the point - and organizes that information, produces metrics, and presents it to you in an insightful way. In a lot less words, Riot is the beginning of a true internet of things.</p></td>
+			</tr></table>
+		</div>
+		<div id="quatro">
+		<a id="4"></a>
+		<div id="form">
+		<h1>Login to the Dashboard.</h1>
+		<form id="login" action="auth/login.php" method="post">
+        <input type="text" name="uid" id="uid" class="box" placeholder="  username">
+        <input type="password" name="pwd" id="pwd" class="box" placeholder="  password">
+        <input type="submit" value="Login" id="sub" class="button">
+        <a href="http://angel.co/riot-4"><input type="button" value="Get Login" class="button"></a>
+		</form>
+		</div>
+	</div>
+		<div id="cinco">
+		<a id="5"></a>
+		<ul class="lm">
+			<li class="lm"><button type="button" onmouseout="closeTip(1);" onmouseover="tip(1);" onclick="window.location = 'http://angel.co/riot-4';" id="goto1">Investors</button>
+			<span id="show1">If you are interested in investing or getting involved in any other way.</span></li>
+			<li class="lm"><button type="button" onmouseout="closeTip(2);" onmouseover="tip(2);" onclick ="window.location = 'res/model.pdf';"id="goto2">The Riot Model</button>
+			<span id="show2">For an in-depth look at our business model.</span></li>
+			<!--<li class="lm"><button type="button" onmouseout="closeTip(3);" onmouseover="tip(3);" id="goto3" onclick="" style="color: #cccccc; border: 6px solid #cccccc;">Funding</button>
+			<span id="show3">If you would like to invest but aren't an investor (if you're an investor, that's okay too). *We're currently working on getting this set up</span></li>-->
+		</ul>
+		</div>
+
+<script type="text/javascript">
+	/*var check = function () {
+		var pageWidth = window.innerWidth;
+		document.getElementById('width').innerHTML = pageWidth;
+
+		for ($id = 0; $id < 4; $id++) {
+			if (pageWidth > 1359) { break; }
+			document.getElementById('goto' + id).style.width = '50%';
+			document.getElementById('goto' + id).style.height = '75%';
+			document.getElementById('goto' + id).style.fontSize = '50%';
+			document.getElementByClassName('lm').style.left = '0%';
+			document.getElementsByClassName('lm').style.paddingRight = '40%';
+		}
+	}*/
+	function tip(id) {
+		document.getElementById('show' + id).style.display = 'inline';
+	}
+
+	function closeTip(id) {
+		document.getElementById('show' + id).style.display = 'none';
+	}
+</script>
+
+<script>
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top - 100
+	        }, 1500);
+	        return false;
+	      }
+	    }
+	  });
+	});
+	</script>
+
+		<script type="text/javascript">
+  	//window.onload = function (){
+  	var canvas = document.getElementById('intro');
+  	var add = canvas.getContext('2d');
+  	var img1 = new Image();
+  	img1.src = 'intro.png';
+  	/*img1.onload = function () {*/
+  	function draw() {
+  		add.clearRect(0, 0, 800, 550);
+  		add.drawImage(img1, 0, 0);
+  		var time = new Date();
+  		var px = time.getMilliseconds();
+  		var xpos = px / 5;
+  		var ypos = 100;
+  		add.beginPath();
+  		add.fillStyle = "#0099CC";
+  		add.arc(xpos, ypos + 50, 15, 0, Math.PI * 2, true)
+  		add.arc(xpos, ypos + 150, 15, 0, Math.PI * 2, true);
+  		add.arc(xpos, ypos + 250, 15, 0, Math.PI * 2, true);
+  		add.fill();
+  		add.closePath();
+  		add.beginPath();
+  		add.fillStyle = "#0099CC";
+  		add.arc(xpos + 200, ypos + 50, 15, 0, Math.PI * 2, true)
+  		add.arc(xpos + 200, ypos + 150, 15, 0, Math.PI * 2, true);
+  		add.arc(xpos + 200, ypos + 250, 15, 0, Math.PI * 2, true);
+  		add.fill();
+  		add.closePath();
+  		add.beginPath();
+  		add.fillStyle = "#0099CC";
+  		add.arc(xpos + 400, ypos + 50, 15, 0, Math.PI * 2, true)
+  		add.arc(xpos + 400, ypos + 150, 15, 0, Math.PI * 2, true);
+  		add.arc(xpos + 400, ypos + 250, 15, 0, Math.PI * 2, true);
+  		add.fill();
+  		add.closePath();
+
+  		add.beginPath();
+  		add.fillStyle = "#0099CC";
+  		add.fillRect(690, 440, 30, 105);
+  		add.closePath();
+  		/**/
+  		add.beginPath();
+  		var py = time.getMilliseconds();
+  		var cxpos = 705;
+  		var cypos = 450 + py/50;
+  		add.fillStyle = "#fff";
+  		add.arc(cxpos, cypos + 5, 6, 0, Math.PI * 2, true);
+  		add.arc(cxpos, cypos + 25, 6, 0, Math.PI * 2, true);
+  		add.arc(cxpos, cypos + 45, 6, 0, Math.PI * 2, true);
+  		add.arc(cxpos, cypos + 65, 6, 0, Math.PI * 2, true);
+		add.arc(cxpos, cypos + 85, 6, 0, Math.PI * 2, true);
+  		add.fill();
+  		/*add.restore();*/
+
+  		window.requestAnimationFrame(draw);
+  	}
+  	window.requestAnimationFrame(draw); /**/
+  	/*}*/
+
+
+
+  	/*add.fillRect(0, 100, 600, 10);
+  	add.fillRect(0, 200, 750, 10);
+  	add.fillRect(0, 300, 600, 10);
+  	//}*/
+
+
+		</script>
+
+		<script type="text/javascript">
+  	var mcanvas = document.getElementById('messy');
+  	var madd = mcanvas.getContext('2d');
+  	var bucket = new Image();
+  	bucket.src = 'bucket.png';
+
+
+  	function mdraw() {
+  		var mtime = new Date();
+  		madd.clearRect(0, 0, 550, 400);
+  		madd.drawImage(bucket, 20, 210);
+  		madd.drawImage(bucket, 220, 210);
+  		madd.drawImage(bucket, 420, 210);
+  		madd.beginPath();
+  		madd.fillStyle = "#E7E7E7";
+  		/*madd.fillRect(0, 0, 500, 400);*/
+  		madd.closePath();
+  		
+		
+		madd.fillStyle = '#0099CC';
+  		madd.fillRect(75, 180, 20, 52);
+  		madd.fillRect(275, 180, 20, 52);
+  		madd.fillRect(475, 180, 20, 52);
+  		madd.closePath();
+		for (t = 0; t < 4; t++) {
+  		madd.beginPath();
+  		madd.fillStyle = '#FFF';
+  		var mpy2 = mtime.getMilliseconds();
+  		var mypost = 165 + 20 * t + mpy2 / 50;
+		madd.arc(85, mypost, 4, 0, Math.PI * 2, true);
+  		madd.arc(85, mypost, 4, 0, Math.PI * 2, true);
+  		madd.arc(285, mypost, 4, 0, Math.PI * 2, true);
+  		madd.arc(485, mypost, 4, 0, Math.PI * 2, true);
+  		madd.closePath();
+  		madd.fill();
+		}
+		madd.beginPath();
+  		madd.fillStyle = "#0099CC";
+  		madd.fillRect(0, 0, 30, 150);
+  		madd.fillRect(0, 150, 495, 30);
+  		madd.closePath();
+
+
+  		for (n = 0; n < 8; n++) {
+  			madd.beginPath();
+  			madd.fillStyle = "#FFF";
+  			var mxpos = 15;
+  			var mpy = mtime.getMilliseconds();
+  			var mypos = 20 * n;
+  			var fmypos = mypos + mpy / 50;
+  			madd.arc(mxpos, fmypos, 6, 0, Math.PI * 2, true);
+  			madd.closePath();
+  			madd.fill();
+  		}
+  		for (f = 0; f < 24; f++) {
+  			madd.beginPath();
+  			madd.fillStyle = "#FFF";
+  			var mpx = mtime.getMilliseconds();
+  			var mxpos = 15 + 20 * f + mpy / 50;
+  			var mypos = 165;
+  			madd.arc(mxpos, mypos, 6, 0, Math.PI * 2, true);
+  			madd.closePath();
+  			madd.fill();
+  		}
+
+  		madd.beginPath();
+  		madd.fillStyle = '#4cff00';
+  		madd.fillRect(495, 150, 10, 30);
+  		madd.closePath();
+  		madd.beginPath();
+
+
+  		madd.beginPath();
+  		madd.fillStyle = '#FFF';
+  		madd.fillRect(80, 320, 10, 150);
+  		madd.fillRect(280, 320, 10, 150);
+  		madd.fillRect(480, 320, 10, 150);
+  		madd.closePath();
+
+  		window.requestAnimationFrame(mdraw);
+  	}
+  	window.requestAnimationFrame(mdraw);
+		</script>
+		<script type="text/javascript">
+			var ccanvas = document.getElementById('clean');
+  	var cadd = ccanvas.getContext('2d');
+  	
+  		
+
+		</script>
+		<script type="text/javascript">
+  	var ccanvas = document.getElementById('clean');
+  	var cadd = ccanvas.getContext('2d');
+  	var gear = new Image();
+  	gear.src = 'gear.png';
+
+  	function cdraw() {
+  		var ctime = new Date();
+  		cadd.clearRect(0, 0, 600, 550);
+  		cadd.save();
+  		cadd.drawImage(gear, 250, 350);
+  		cadd.drawImage(gear, 300, 385);
+  		cadd.rotate(Math.PI / 2 + ctime.getMilliseconds() / 60);
+  		cadd.restore();
+  		
+  		cadd.beginPath();
+  		cadd.fillStyle = '#FFF';
+  		cadd.fillRect(100, 0, 10, 150);
+  		cadd.fillRect(300, 0, 10, 275);
+  		cadd.fillRect(500, 0, 10, 150);
+  		cadd.closePath();
+
+  		var tri = new Path2D();
+  		cadd.beginPath();
+  		tri.moveTo(100, 150);
+  		tri.lineTo(300, 225);
+  		tri.lineTo(300, 215);
+  		tri.lineTo(100, 140);
+  		cadd.closePath();
+  		cadd.fillStyle = "#FFF";
+  		cadd.fill(tri);
+  		var tri2 = new Path2D();
+  		cadd.beginPath();
+  		tri2.moveTo(510, 150);
+  		tri2.lineTo(310, 225);
+  		tri2.lineTo(310, 215);
+  		tri2.lineTo(510, 140);
+  		cadd.closePath();
+  		cadd.fill(tri2);
+  		cadd.fillStyle = "#FFF";
+  		var cpy = ctime.getMilliseconds() / 50;
+  		cadd.arc(305, 260 + cpy, 4, 0, Math.PI * 2, true);
+  		cadd.arc(305, 280 + cpy, 4, 0, Math.PI * 2, true);
+  		cadd.arc(305, 300 + cpy, 4, 0, Math.PI * 2, true);
+  		cadd.fill();
+  		/*var matrix = new Path2D();
+  		cadd.beginPath();
+  		cadd.fillStyle = "#FFF";
+  		matrix.moveTo(305, 350);
+		matrix.lineTo(280, 360);
+  		matrix.lineTo(260, 400);
+  		matrix.lineTo(280, 450);
+  		matrix.lineTo(310, 470);
+  		/*matrix.lineTo(305, 500);rep*//*
+  		matrix.lineTo(360, 440);
+  		matrix.lineTo(340, 420);
+  		matrix.lineTo(360, 400);
+		matrix.lineTo(340, 375);
+  		matrix.lineTo(305, 350);
+  		cadd.closePath();
+  		cadd.fill(matrix);*/
+
+  		cadd.beginPath();
+  		cadd.fillStyle = "#FFF";
+  		cadd.fillRect(265, 270, 10, 30);
+  		cadd.fillRect(200, 300, 75, 10);
+  		cadd.fillRect(200, 300, 10, 200);
+  		cadd.fillRect(200, 500, 210, 10);
+  		cadd.fillRect(400, 300, 10, 200);
+  		cadd.fillRect(335, 300, 75, 10);
+  		cadd.fillRect(335, 270, 10, 30);
+  		cadd.closePath();
+
+  		window.requestAnimationFrame(cdraw);
+  	}
+  	window.requestAnimationFrame(cdraw);
+
+		</script>
+	
+	</body>
+</html>

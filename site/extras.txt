@@ -1,0 +1,115 @@
+var user = document.getElementById('uid').value;
+var key = document.getElementById('pwd').value;
+document.getElementById('display').innerHTML = uid;
+
+<!--<table id="">
+                <tr>
+                    <td id="tthings">
+                        <div id="subthing"><p>Thermostat</p></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tthings">
+                        <div id="subthing"><p>TV</p></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tthings">
+                        <div id="subthing"><p>Car</p></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tthings">
+                        <div id="subthing"><p>Electricity</p></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tthings">
+                        <div id="subthing"><p></p></div>
+                    </td>
+                </tr>
+            </table>  -->
+
+
+<!--<table>
+                <tr>
+                    <td id="thead"><div id="subhead"><p>Welcome, User</p></div></td>
+                    <td id="thead"><div id="subhead"><p>Your Things</p></div></td>
+                    <td id="thead"><div id="subhead"><p>Settings</p></div></td>
+                </tr>
+            </table>-->
+
+
+
+  		var bit = {}
+  			
+
+  			function draw()
+  			{
+  				var xpos = 0;
+  				var ypos = 0;
+  				var hue = "#0099CC";
+				/*var xpos = 100;
+  				var ypos = 100;
+  				add.beginPath();*/
+  				for (i = 0; i < 6; i++)
+  				{
+					/*add.beginPath();/
+  					add.arc(this.xpos + 15 + 100 * i, this.ypos + 150, 15, 0, Math.PI * 2, false);
+					/*add.closePath();*/
+  					add.fillStlye = this.hue;
+  					add.fill();
+  				}
+  				for (i = 0; i < 4; i++)
+  				{
+					/*add.beginPath();*/
+  					add.arc(this.xpos + 15 + 150 * i, this.ypos + 250, 15, 0, Math.PI * 2, false);
+					/*add.closePath();*/
+					add.fillStlye = this.hue;
+  					add.fill();
+  				}
+  				for (i = 0; i < 5; i++)
+  				{
+					/*add.beginPath();*/
+  					add.arc(this.xpos + 15 + 120 * i, this.ypos + 350, 15, 0, Math.PI * 2, false);
+					/*add.closePath();*/
+					add.fillStlye = this.hue;
+  					add.fill();
+  				}
+  				
+  				*/
+
+
+  				/*add.arc(this.xpos + 115, this.ypos + 150, 15, 0, Math.PI * 2, true);
+  				add.arc(this.xpos + 265, this.ypos + 250, 15, 0, Math.PI * 2, true);
+  				add.arc(this.xpos + 415, this.ypos + 350, 15, 0, Math.PI * 2, true);
+  				add.closePath();*/
+
+  			}
+
+  		};
+  		bit.draw();
+
+  		function animate()
+  		{
+  			/*time = new Date();
+  			var velx = time.getSeconds();
+  			add.clearRect(0, 0, canvas.width, canvas.height);
+  			bit.draw();
+  			bit.xpos += velx;
+  			window.requestAnimationFrame(animate);*/
+
+  		}
+  		/* For adding animation to ul sidebar   */
+  		var acanvas = document.getElementById('assc', 'assc2', 'assc3', 'assc4');
+  		var aadd = acanvas.getContext('2d');
+  		aadd.beginPath();
+  		aadd.fillStyle = "#696969";
+  		var axpos = 11;
+  		var aypos = 11;
+  		aadd.arc(axpos, aypos, 11, 0, Math.PI * 2, true);
+  		/*aadd.arc(axpos, aypos+50, 7, 0, Math.PI * 2, true);
+  		aadd.arc(axpos, aypos+100, 7, 0, Math.PI * 2, true);
+  		aadd.arc(axpos, aypos+150, 7, 0, Math.PI * 2, true);*/
+  		aadd.fill();
+

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Welcome to Riot</title>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<link type="text/css" href="indie.css" rel="stylesheet">
+		<link rel="icon" type="image/png" href="geo.png">
+
+    </head>
+    <body>
+
+
+<div id="scroll">
+
+
+		<ul class="navbar">
+		<li style="border: none;">	
+		<h7 id="titlehead">Riot</h7>
+			<!--<img src="geo.png" width="10%" height="10%" alt="geo_logo">-->
+		</li>
+		<li>
+			<a href="#uno"><span>Welcome</span></a>
+		</li>
+		<li>
+			<a href="#dos"><span>Overview</span></a>
+		</li>
+		<li>
+			<a href="#tres"><span>Explore More</span></a>
+		</li>
+		<li>
+			<a href="#quatro"><span>Login</span></a>
+		</li>
+	</ul>
+	
+
+</div>
+		
+        <div id="uno">
+			<a id="1"></a>
+			<table><tr><td><canvas id='intro' width="800" height="550"><p>Nothing here.</p></canvas></td>
+			<td class="uno"><h1  class="intro" style="color: #4cff00;">Start with data.</h1><h1  class="intro" style="color: #4cff00;">End with insights.</h1></td></tr>
+			</table>
+		</div>
+		
+		<div id="dos">
+			<a id="2"></a>
+			<table><tr><td><h1 style="color: #fff;">No more messy data.</h1><br><h2 id="desc">Riot collects data from everywhere and sorts it into neat bins, just for you. This way, it's easy to figure out just what's going on with all of your devices.</h2></td>
+			<td class="messy"><canvas id="messy" height="400" width="550"><p>Nothing here.</p></canvas></td>
+			</tr></table>
+		</div>
+
+		<div id="tres">
+			<a id="3"></a>
+			<table><tr><td><canvas id="clean" height="500" width="550"><p>Nothing here.</p></canvas></td>
+			<td class="messy1"><h1 style="color: #fff;">Readable insights.</h1><br><h2 id="desc">Riot takes data from anything, anywhere and turns those bits into things that you can see.</h2></td>
+			</tr></table>
+		</div>
+
+
+<script>
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1500);
+	        return false;
+	      }
+	    }
+	  });
+	});
+	</script>
+
+		<script type="text/javascript">
+  	//window.onload = function (){
+  	var canvas = document.getElementById('intro');
+  	var add = canvas.getContext('2d');
+  	var img1 = new Image();
+  	img1.onload = function ()
+  	{
+  		add.drawImage(img1, 0, 0);
+  		for (i = 0; i < 3; i++)
+  		{
+  			add.beginPath();
+  			var xpos = 100 * i;
+  			var ypos = 100 * i;
+  			add.fillStyle = "#0099CC";
+  			add.arc(xpos + 15, ypos + 150, 15, 0, Math.PI * 2, true);
+  			add.arc(xpos + 165, ypos + 150, 15, 0, Math.PI * 2, true);
+  			add.arc(xpos + 315, ypos + 150, 15, 0, Math.PI * 2, true);
+  			add.fill();
+  			add.fillRect(690, 440, 30, 105);
+  			add.closePath();
+  			add.beginPath();
+  			var cxpos = 705;
+  			var cypos = 450;
+  			add.fillStyle = "#fff";
+  			add.arc(cxpos, cypos+5, 6, 0, Math.PI * 2, true);
+			add.arc(cxpos, cypos+25, 6, 0, Math.PI * 2, true);
+			add.arc(cxpos, cypos+45, 6, 0, Math.PI * 2, true);
+			add.arc(cxpos, cypos+65, 6, 0, Math.PI * 2, true);
+  			add.fill();
+  		}
+  	}
+  	img1.src = 'intro.png';
+
+
+  	/*add.fillRect(0, 100, 600, 10);
+  	add.fillRect(0, 200, 750, 10);
+  	add.fillRect(0, 300, 600, 10);
+  	//}*/
+
+
+		</script>
+
+		<script type="text/javascript">
+  	var mcanvas = document.getElementById('messy');
+  	var madd = mcanvas.getContext('2d');
+  	var bucket = new Image();
+  	bucket.src = 'bucket.png';
+
+  	bucket.onload = function ()
+  	{
+
+  		madd.drawImage(bucket, 20, 210);
+  		madd.drawImage(bucket, 220, 210);
+  		madd.drawImage(bucket, 420, 210);
+  		madd.beginPath();
+  		madd.fillStyle = "#E7E7E7";
+  		/*madd.fillRect(0, 0, 500, 400);*/
+  		madd.closePath();
+  		madd.beginPath();
+  		madd.fillStyle = "#0099CC";
+  		madd.fillRect(0, 0, 30, 150);
+  		madd.closePath();
+  		for (n = 0; n < 7; n++)
+  		{
+  			madd.beginPath();
+  			madd.fillStyle = "#FFF";
+  			var mxpos = 15;
+  			var mypos = 20 + 20 * n;
+  			madd.arc(mxpos, mypos, 6, 0, Math.PI * 2, true);
+  			madd.closePath();
+  			madd.fill();
+  		}
+
+  		madd.beginPath();
+  		madd.fillStyle = '#0099CC';
+  		madd.fillRect(0, 150, 495, 30);
+  		madd.closePath();
+  		for (f = 0; f < 24; f++)
+  		{
+  			madd.beginPath();
+  			madd.fillStyle = "#FFF";
+  			var mxpos = 15 + 20 * f;
+  			var mypos = 165;
+  			madd.arc(mxpos, mypos, 6, 0, Math.PI * 2, true);
+  			madd.closePath();
+  			madd.fill();
+  		}
+  		madd.beginPath();
+  		madd.fillStyle = '#0099CC';
+  		madd.fillRect(75, 180, 20, 52);
+  		madd.fillRect(275, 180, 20, 52);
+  		madd.fillRect(475, 180, 20, 52);
+  		madd.closePath();
+  		for (t = 0; t < 3; t++)
+  		{
+  			madd.beginPath();
+  			madd.fillStyle = '#FFF';
+  			var mypost = 185 + 20 * t;
+  			madd.arc(85, mypost, 4, 0, Math.PI * 2, true);
+  			madd.arc(285, mypost, 4, 0, Math.PI * 2, true);
+  			madd.arc(485, mypost, 4, 0, Math.PI * 2, true);
+  			madd.closePath();
+  			madd.fill();
+
+  		}
+  		madd.beginPath();
+  		madd.fillStyle = '#FFF';
+  		madd.fillRect(80, 320, 10, 150);
+  		madd.fillRect(280, 320, 10, 150);
+  		madd.fillRect(480, 320, 10, 150);
+  		madd.closePath();
+  	}
+
+
+
+		</script>
+		
+		<script type="text/javascript">
+  	var ccanvas = document.getElementById('clean');
+  	var cadd = ccanvas.getContext('2d');
+
+  	cadd.beginPath();
+  	cadd.fillStyle = '#FFF';
+  	cadd.fillRect(100, 0, 10, 150);
+  	cadd.fillRect(300, 0, 10, 275);
+  	cadd.fillRect(500, 0, 10, 150);
+  	cadd.closePath();
+
+  	var tri = new Path2D();
+  	cadd.beginPath();
+  	tri.moveTo(100, 150);
+  	tri.lineTo(300, 225);
+  	tri.lineTo(300, 215);
+  	tri.lineTo(100, 140);
+  	cadd.closePath();
+  	cadd.fillStyle = "#FFF";
+  	cadd.fill(tri);
+	var tri2 = new Path2D();
+	cadd.beginPath();
+  	tri2.moveTo(510, 150);
+  	tri2.lineTo(310, 225);
+  	tri2.lineTo(310, 215);
+  	tri2.lineTo(510, 140);
+  	cadd.closePath();
+  	cadd.fillStyle = "#FFF";
+  	cadd.fill(tri2);
+
+		</script>
+	
+	</body>
+</html>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ServiceConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" serviceName="receive" osFamily="2" osVersion="*" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration">
+  <Role name="role">
+    <ConfigurationSettings />
+    <Instances count="1" />
+    <Certificates />
+  </Role>
+</ServiceConfiguration>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Ajax Test</title>        
+		
+<script type="text/javascript">
+	function go(c,d) {
+		var request = new XMLHttpRequest();
+		request.onreadystatechange = function() {
+			document.getElementById('return').innerHTML = request.responseText;
+		}	
+		request.open('GET', 'ajax.php?type=' + c + '&graft=' + d, true);
+		request.send();
+	}
+
+</script>
+    </head>
+
+    <body>
+		<button onclick="go('messageText', 'salt')">Send</button>
+		<p id="return"></p>
+    </body>
+</html>
